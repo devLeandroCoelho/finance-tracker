@@ -11,7 +11,48 @@
 
 </div>
 
+<p align="center">
+  <a href="#português">Português</a> | <a href="#english">English</a>
+</p>
+
 ---
+
+# <a id="português"></a>Português
+
+# Finance Tracker — Controle Financeiro Pessoal
+
+Aplicação de controle financeiro pessoal para gerenciar receitas, despesas e saldo.
+
+### Funcionalidades
+
+- Cadastro de receitas e despesas com categorias
+- Dashboard interativo com gráficos
+- Controle de saldo mensal
+- Interface limpa e intuitiva
+
+### Stack
+
+| Camada | Tecnologia |
+|--------|------------|
+| Markup | HTML5 |
+| Estilos | CSS3 |
+| Interatividade | JavaScript vanilla |
+
+### Como rodar
+
+```bash
+git clone https://github.com/devLeandroCoelho/finance-tracker.git
+cd finance-tracker
+open index.html
+```
+
+**Licença:** MIT
+
+</div>
+
+---
+
+# <a id="english"></a>English
 
 Personal finance management app to track income, expenses, and balance — all in one place.
 
@@ -57,36 +98,3 @@ MIT
 ---
 
 <div align="center">
-
-## 🇧🇷 Português
-
-# Finance Tracker — Controle Financeiro Pessoal
-
-Aplicação de controle financeiro pessoal para gerenciar receitas, despesas e saldo.
-
-### Funcionalidades
-
-- Cadastro de receitas e despesas com categorias
-- Dashboard interativo com gráficos
-- Controle de saldo mensal
-- Interface limpa e intuitiva
-
-### Stack
-
-| Camada | Tecnologia |
-|--------|------------|
-| Markup | HTML5 |
-| Estilos | CSS3 |
-| Interatividade | JavaScript vanilla |
-
-### Como rodar
-
-```bash
-git clone https://github.com/devLeandroCoelho/finance-tracker.git
-cd finance-tracker
-open index.html
-```
-
-**Licença:** MIT
-
-</div>
