@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Tracker — Controle Financeiro Pessoal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app">
+        <header class="header">
+            <div class="container">
+                <h1>💰 Finance Tracker</h1>
+                <p class="subtitle">Controle financeiro pessoal</p>
+            </div>
+        </header>
+
+        <main class="main">
+            <div class="container">
+                <!-- Summary Cards -->
+                <div class="summary-grid">
+                    <div class="summary-card income">
+                        <div class="summary-icon">📈</div>
+                        <div class="summary-content">
+                            <span class="summary-label">Receitas</span>
+                            <span class="summary-value" id="totalIncome">R$ 0,00</span>
+                        </div>
+                    </div>
+                    <div class="summary-card expense">
+                        <div class="summary-icon">📉</div>
+                        <div class="summary-content">
+                            <span class="summary-label">Despesas</span>
+                            <span class="summary-value" id="totalExpense">R$ 0,00</span>
+                        </div>
+                    </div>
+                    <div class="summary-card balance">
+                        <div class="summary-icon">💵</div>
+                        <div class="summary-content">
+                            <span class="summary-label">Saldo</span>
+                            <span class="summary-value" id="balance">R$ 0,00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add Transaction -->
+                <div class="card">
+                    <h2>Adicionar Transação</h2>
+                    <form id="transactionForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="description">Descrição</label>
+                                <input type="text" id="description" placeholder="Ex: Salário, Aluguel" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="amount">Valor (R$)</label>
+                                <input type="number" id="amount" step="0.01" min="0.01" placeholder="0,00" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="type">Tipo</label>
+                                <select id="type">
+                                    <option value="income">Receita</option>
+                                    <option value="expense">Despesa</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="category">Categoria</label>
+                                <select id="category">
+                                    <option value="salary">Salário</option>
+                                    <option value="food">Alimentação</option>
+                                    <option value="transport">Transporte</option>
+                                    <option value="housing">Moradia</option>
+                                    <option value="entertainment">Lazer</option>
+                                    <option value="health">Saúde</option>
+                                    <option value="education">Educação</option>
+                                    <option value="other">Outros</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Adicionar</button>
+                    </form>
+                </div>
+
+                <!-- Chart -->
+                <div class="card">
+                    <h2>Visão Geral</h2>
+                    <div class="chart-container">
+                        <div class="chart-bar">
+                            <div class="bar-income" id="barIncome"></div>
+                            <div class="bar-expense" id="barExpense"></div>
+                        </div>
+                        <div class="chart-legend">
+                            <span class="legend-income">Receitas</span>
+                            <span class="legend-expense">Despesas</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Transactions List -->
+                <div class="card">
+                    <h2>Transações Recentes</h2>
+                    <div id="transactionsList" class="transactions-list">
+                        <p class="empty-state">Nenhuma transação cadastrada.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <p>Finance Tracker © 2026 — Desenvolvido por HTTP200.TI</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
